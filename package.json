@@ -1,0 +1,22 @@
+{
+  "name": "cd_eps",
+  "version": "1.0.0",
+  "description": "The angle of the Earth's axial tilt with respect to the orbital plane (the obliquity of the ecliptic) varies between 22.1° and 24.5°, over a cycle of about 41,000 years. The current tilt is 23.44°, roughly halfway between its extreme values. The tilt last reached its maximum in 8,700 BCE. It is now in the decreasing phase of its cycle, and will reach its minimum around the year 11,800 CE.[12]",
+  "main": "cd_eps.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RulezKT/cd_eps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RulezKT/cd_eps/issues"
+  },
+  "homepage": "https://github.com/RulezKT/cd_eps#readme",
+  "dependencies": {
+    "cd_consts": "github:RulezKT/cd_consts"
+  }
+}
