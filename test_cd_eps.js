@@ -1,3 +1,5 @@
+let fs = require("fs");
+
 const { find_eps, find_eps_normal } = require("./cd_eps");
 
 function test_performance(func_to_test) {
@@ -16,9 +18,27 @@ function test_performance(func_to_test) {
 }
 
 //0.4091417072884116
-const time_sec_from_jd2000 = -682470763.0000188;
-console.log(find_eps_normal(time_sec_from_jd2000));
-console.log(find_eps(time_sec_from_jd2000));
+//const time_sec_from_jd2000 = -682470763.0000188;
+//console.log(find_eps_normal(time_sec_from_jd2000));
+//console.log(find_eps(time_sec_from_jd2000));
 
-test_performance(find_eps);
-test_performance(find_eps_normal);
+//test_performance(find_eps);
+//test_performance(find_eps_normal);
+
+// let max_eps;
+// let min_eps;
+
+// for (let i = -4734072000; i <= 4735368000; i++) {
+//   const eps = find_eps(i);
+//   if (max_eps === undefined || eps > max_eps) {
+//     max_eps = eps;
+//   }
+//   if (min_eps === undefined || eps < min_eps) {
+//     min_eps = eps;
+//   }
+// }
+
+// fs.writeFileSync(
+//   "max_eps.txt",
+//   `max_eps = ${max_eps} \nmin_eps = ${min_eps} \n`
+// );
