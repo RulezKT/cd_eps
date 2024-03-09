@@ -24,7 +24,7 @@ function find_eps_normal(sec_from_jd2000) {
 }
 //version without dependencies
 //we need 7 numbers after the decimal point
-function find_eps(sec_from_jd2000) {
+function find_epsV2(sec_from_jd2000) {
   const t = sec_from_jd2000 / 3155760000;
 
   let eps =
@@ -41,7 +41,16 @@ function find_eps(sec_from_jd2000) {
   return eps;
 }
 
+//V3
+//using tests and average movement speed
+function find_eps(sec_from_jd2000) {
+  const eps_0_sec = 0.4090926006005825565914;
+  const eps_in_1_sec = -0.0000000000000719475504;
+
+  return eps_0_sec + sec_from_jd2000 * eps_in_1_sec;
+}
+
 module.exports = {
   find_eps,
-  find_eps_normal,
+  find_epsV2,
 };
